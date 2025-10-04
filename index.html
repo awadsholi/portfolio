@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Awad Sholi — Computer Engineer specialized in backend development (Spring Boot, FastAPI, ASP.NET Core)." />
+  <meta name="keywords" content="Awad Sholi, Backend Developer, Spring Boot, FastAPI, ASP.NET Core, Java, Python, C#, SQL, Microservices, Linux" />
+  <meta name="author" content="Awad Sholi" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourportfolio.com/" />
+  <meta property="og:title" content="Awad Sholi | Computer Engineer & Backend Developer" />
+  <meta property="og:description" content="Backend Developer: Spring Boot, FastAPI, ASP.NET Core. Building secure, scalable REST APIs." />
+  <!-- Simple SVG OG image with initials AS -->
+  <meta property="og:image" content="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>
+  <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'>
+    <rect width='100%' height='100%' fill='%236366f1'/>
+    <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='140' fill='white'>AS</text>
+  </svg>" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://yourportfolio.com/" />
+  <meta property="twitter:title" content="Awad Sholi | Computer Engineer & Backend Developer" />
+  <meta property="twitter:description" content="Backend Developer: Spring Boot, FastAPI, ASP.NET Core. Building secure, scalable REST APIs." />
+  <meta property="twitter:image" content="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>
+  <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'>
+    <rect width='100%' height='100%' fill='%236366f1'/>
+    <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='140' fill='white'>AS</text>
+  </svg>" />
+
+  <title>Awad Sholi | Computer Engineer & Backend Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>"> 
+
+  <!-- Canonical & theme -->
+  <link rel="canonical" href="https://yourportfolio.com/" />
+  <meta name="theme-color" content="#6366f1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- EmailJS (⚠️ replace with your keys before deploying) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      // TODO: Replace with your own public key from emailjs.com
+      emailjs.init('_lHB6Air3bUCDz9Wn');
+    })();
+
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#8b5cf6',
+            dark: '#1e293b',
+            light: '#f8fafc'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            raleway: ['Raleway', 'sans-serif']
+          },
+          animation: {
+            typing: 'typing 3.5s steps(30, end), blink-caret .75s step-end infinite',
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          },
+          keyframes: {
+            typing: { from: { width: '0' }, to: { width: '100%' } },
+            'blink-caret': { 'from, to': { borderColor: 'transparent' }, '50%': { borderColor: '#6366f1' } },
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+            slideUp: { '0%': { transform: 'translateY(20px)', opacity: 0 }, '100%': { transform: 'translateY(0)', opacity: 1 } }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root { --primary:#6366f1; --secondary:#8b5cf6; --dark:#1e293b; --light:#f8fafc; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(--dark); scroll-behavior:smooth; transition: background-color .3s ease, color .3s ease; }
+    .dark body { background:#0f172a; color:#e2e8f0; }
+    .hero { background: linear-gradient(135deg, rgba(99,102,241,.1) 0%, rgba(139,92,246,.1) 100%); min-height: 100vh; position:relative; overflow:hidden; }
+    .typing-container{ overflow:hidden; border-right:3px solid var(--primary); white-space:nowrap; margin:0 auto; animation: typing 3.5s steps(30,end), blink-caret .75s step-end infinite; }
+    @keyframes typing { from{width:0} to{width:100%} } @keyframes blink-caret{ from,to{border-color:transparent} 50%{border-color:#6366f1}}
+    .nav-link{ position:relative } .nav-link::after{ content:''; position:absolute; width:0; height:2px; bottom:-2px; left:0; background:var(--primary); transition:width .3s ease } .nav-link:hover::after{ width:100% }
+    .project-card{ transition: transform .3s ease, box-shadow .3s ease; transform-style:preserve-3d; perspective:1000px }
+    .project-card:hover{ transform: translateY(-10px) rotateX(5deg) rotateY(5deg); box-shadow:0 20px 40px rgba(0,0,0,.15) }
+    .project-image{ transition: transform .5s ease }
+    .project-card:hover .project-image{ transform: scale(1.05) translateZ(20px) }
+    .progress-bar{ height:8px; border-radius:4px; background:#e2e8f0; overflow:hidden; position:relative }
+    .progress-fill{ height:100%; background:linear-gradient(90deg, var(--primary), var(--secondary)); border-radius:4px; width:0; transition: width 1.5s ease-in-out; position:relative }
+    .progress-fill::after{ content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent); animation: shimmer 2s infinite }
+    @keyframes shimmer{ 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+    .back-to-top{ position:fixed; bottom:30px; right:30px; width:50px; height:50px; background:linear-gradient(135deg, var(--primary), var(--secondary)); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none; opacity:0; visibility:hidden; transform:translateY(20px); transition: all .3s ease; z-index:1000; box-shadow:0 4px 12px rgba(99,102,241,.3) }
+    .back-to-top.show{ opacity:1; visibility:visible; transform:translateY(0) }
+    #scroll-progress{ position:fixed; top:0; left:0; height:4px; width:0%; z-index:2147483647; background:linear-gradient(90deg, var(--primary), var(--secondary)); transition:width .1s linear; pointer-events:none }
+    .notification{ position:fixed; top:20px; right:20px; padding:15px 25px; border-radius:8px; color:white; font-weight:500; box-shadow:0 4px 12px rgba(0,0,0,.15); transform:translateX(120%); opacity:0; transition: transform .3s ease-out, opacity .3s ease-out; z-index:1000 }
+    .notification.show{ transform:translateX(0); opacity:1 }
+    .notification.success{ background:#10b981 } .notification.error{ background:#ef4444 }
+  </style>
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Notification Container -->
+  <div id="notification" class="notification" role="status" aria-live="polite">
+    <span id="notification-message"></span>
+  </div>
+
+  <!-- Back to Top Button (floating) -->
+  <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#" class="text-2xl font-bold text-primary">A.S<span class="text-secondary">.</span></a>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link text-gray-600 hover:text-primary">Home</a>
+          <a href="#about" class="nav-link text-gray-600 hover:text-primary">About</a>
+          <a href="#skills" class="nav-link text-gray-600 hover:text-primary">Skills</a>
+          <a href="#experience" class="nav-link text-gray-600 hover:text-primary">Experience</a>
+          <a href="#education" class="nav-link text-gray-600 hover:text-primary">Education</a>
+          <a href="#contact" class="nav-link text-gray-600 hover:text-primary">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium hover:opacity-90 transition">Contact Me</a>
+        </div>
+        <button id="mobile-menu-button" type="button" aria-label="Toggle navigation" class="md:hidden text-gray-600">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+      <div class="px-4 py-5 flex flex-col space-y-4">
+        <a href="#home" class="nav-link text-gray-600 hover:text-primary">Home</a>
+        <a href="#about" class="nav-link text-gray-600 hover:text-primary">About</a>
+        <a href="#skills" class="nav-link text-gray-600 hover:text-primary">Skills</a>
+        <a href="#experience" class="nav-link text-gray-600 hover:text-primary">Experience</a>
+        <a href="#education" class="nav-link text-gray-600 hover:text-primary">Education</a>
+        <a href="#contact" class="nav-link text-gray-600 hover:text-primary">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 md:pt-20 md:pb-12">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-3/5 mb-12 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-slide-up">Hi, I'm <span class="text-primary">Awad Sholi</span></h1>
+          <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">
+            <span class="typing-container inline-block">Computer Engineer — Backend Developer</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl animate-fade-in">
+            Backend specialist focused on building secure, scalable REST APIs with Spring Boot, FastAPI, and ASP.NET Core. Comfortable across Java, Python, and C#, shipping to Linux environments with Git-driven workflows.
+          </p>
+          <div class="flex gap-4">
+            <a href="#experience" class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium hover:opacity-90 transition">See Experience</a>
+            <a href="#contact" class="px-8 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition">Hire Me</a>
+          </div>
+        </div>
+        <div class="md:w-2/5 flex justify-center">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+              <img src="https://i.ibb.co/k6GjLwFy/awad.jpg" alt="Awad Sholi — Backend Developer" class="w-full h-full object-cover"/>
+            </div>
+            <div class="absolute -top-4 -left-4 bg-primary text-white p-3 rounded-full"><i class="fas fa-code text-xl"></i></div>
+            <div class="absolute top-20 -right-10 bg-secondary text-white p-3 rounded-full animate-pulse"><i class="fas fa-server text-xl"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech ticker -->
+      <div id="tech-marquee" class="mt-16 rounded-2xl bg-gray-100/80 ring-1 ring-gray-200/70 px-4 overflow-x-hidden dark:bg-gray-800/40 dark:ring-white/10">
+        <div class="flex gap-10 whitespace-nowrap will-change-transform" id="tech-track">
+          <div class="flex items-center gap-10 text-gray-500 text-lg py-3">
+            <span>Spring Boot</span><span>FastAPI</span><span>ASP.NET Core</span><span>Java</span>
+            <span>Python</span><span>C#</span><span>SQL</span><span>Microservices</span>
+            <span>Git/GitHub</span><span>Linux</span><span>C/C++</span>
+          </div>
+          <div class="flex items-center gap-10 text-gray-500 text-lg py-3" aria-hidden="true">
+            <span>Spring Boot</span><span>FastAPI</span><span>ASP.NET Core</span><span>Java</span>
+            <span>Python</span><span>C#</span><span>SQL</span><span>Microservices</span>
+            <span>Git/GitHub</span><span>Linux</span><span>C/C++</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-primary">Me</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Back-end craftsmanship, pragmatic delivery</h3>
+          <p class="text-gray-600 mb-6">I design and implement robust APIs and backend services, favoring clean structure and observability. Recent work spans Spring Boot microservices, FastAPI services, and ASP.NET Core APIs, with SQL fluency and Linux-first deploys.</p>
+          <div class="grid grid-cols-2 gap-6">
+            <div><p class="font-bold mb-1">Name</p><p class="text-gray-600">Awad Sholi</p></div>
+            <div><p class="font-bold mb-1">Email</p><p class="text-gray-600"><a href="mailto:sholyawad@gmail.com" class="hover:underline">sholyawad@gmail.com</a></p></div>
+            <div><p class="font-bold mb-1">Location</p><p class="text-gray-600">Nablus — West Bank, Palestine</p></div>
+            <div><p class="font-bold mb-1">Degree</p><p class="text-gray-600">B.Sc. Computer Engineering (Birzeit University)</p></div>
+          </div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h4 class="font-bold mb-4">Focus Areas</h4>
+          <ul class="space-y-3 text-gray-700">
+            <li>• REST API design &amp; implementation</li>
+            <li>• Microservices &amp; service boundaries</li>
+            <li>• Async I/O (Python) &amp; concurrency</li>
+            <li>• SQL modeling &amp; query tuning</li>
+            <li>• CI-friendly Git workflows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional <span class="text-primary">Experience</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="grid gap-8 md:grid-cols-2">
+        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-start justify-between">
+              <h3 class="text-xl font-bold">Backend Developer — Orienteed</h3>
+              <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">Aug 2025 – Present</span>
+            </div>
+            <p class="text-gray-600 mt-3">Developing and maintaining Spring Boot microservices; designing secure REST APIs; supporting scalable, service‑oriented architectures.</p>
+          </div>
+        </article>
+        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-start justify-between">
+              <h3 class="text-xl font-bold">Backend Intern — ASAL Technologies</h3>
+              <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">Mar 2025 – Jul 2025</span>
+            </div>
+            <p class="text-gray-600 mt-3">FastAPI training & async programming; built Python REST services following modern backend practices.</p>
+          </div>
+        </article>
+        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden md:col-span-2">
+          <div class="p-6">
+            <div class="flex items-start justify-between">
+              <h3 class="text-xl font-bold">Backend Intern — ASAL Technologies</h3>
+              <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">Oct 2024 – Feb 2025</span>
+            </div>
+            <p class="text-gray-600 mt-3">Built ASP.NET Core APIs, focusing on scalable, enterprise‑grade backend design and implementation.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="text-primary">Skills</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-center">Technical</h3>
+          <div class="space-y-6">
+            <div><div class="flex justify-between mb-2"><span>Spring Boot</span><span>90%</span></div><div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div></div>
+            <div><div class="flex justify-between mb-2"><span>FastAPI</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+            <div><div class="flex justify-between mb-2"><span>ASP.NET Core</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+            <div><div class="flex justify-between mb-2"><span>Java / Python / C#</span><span>90%</span></div><div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div></div>
+            <div><div class="flex justify-between mb-2"><span>C/C++</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+            <div><div class="flex justify-between mb-2"><span>SQL &amp; Microservices</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div></div>
+        </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6 text-center">Soft</h3>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center"><div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-comments text-primary text-2xl"></i></div><h4 class="font-bold mb-2">Communication</h4><p class="text-gray-600">Clear, precise, collaborative</p></div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center"><div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-lightbulb text-primary text-2xl"></i></div><h4 class="font-bold mb-2">Problem Solving</h4><p class="text-gray-600">Analytical & hands-on</p></div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center"><div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-users text-primary text-2xl"></i></div><h4 class="font-bold mb-2">Teamwork</h4><p class="text-gray-600">Cross-functional partner</p></div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center"><div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><i class="fas fa-tasks text-primary text-2xl"></i></div><h4 class="font-bold mb-2">Time Management</h4><p class="text-gray-600">Efficient prioritization and deadline adherence</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="text-primary">Projects</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- PalStoreHub -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gray-200 flex items-center justify-center" style="aspect-ratio:16/9;">
+            <img src="https://i.ibb.co/67yrLgCk/palstorehub.png" alt="PalStoreHub — Multi‑vendor e‑commerce" class="w-full h-full object-contain project-image" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">PalStoreHub</h3>
+            <p class="text-gray-600 mb-4">Full‑stack multi‑vendor e‑commerce hub for Palestinian stores and tourists to discover shops. Role‑based management, product catalogs, and deployment ready.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">.NET</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">MongoDB</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/Abubaker-Nafe/PalStoreHub" target="_blank" rel="noopener" class="text-primary font-medium hover:underline">GitHub →</a>
+            </div>
+          </div>
+        </div>
+        <!-- RIVVISs -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gray-200 flex items-center justify-center" style="aspect-ratio:16/9;">
+            <img src="https://i.ibb.co/n8Rjw9ks/rivvis.jpg" alt="RIVVISs — RISC‑V Vector ISS" class="w-full h-full object-cover project-image" loading="lazy"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">RIVVISs — RISC‑V Vector Instruction Set Simulator</h3>
+            <p class="text-gray-600 mb-4">Instruction Set Simulator for RISC‑V vector architectures enabling execution of the new vector instructions to study performance and debug vectorized applications. Supports RVV, provides a flexible interface, and integrates debugging & performance capabilities. Bridges functional validation and performance analysis with efficient simulation, compares against existing simulators, and advances research in vector processing.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">RISC‑V</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">ISS</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Vector Ext.</span>
+            </div>
+            <a href="https://github.com/awadsholi/RISC-V-Vector_Instruction_Set_Simulator_RIVVISS" target="_blank" rel="noopener" class="text-primary font-medium hover:underline">GitHub →</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="https://github.com/awadsholi" target="_blank" rel="noopener" class="px-6 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="text-primary">Education</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="relative">
+          <div class="mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Birzeit University</h3>
+                <span class="px-3 py-1 bg-primary text-white rounded-full text-sm">2020 – 2025</span>
+              </div>
+              <p class="text-secondary font-medium mb-3">B.Sc. in Computer Engineering</p>
+              <p class="text-gray-600">Core: Operating Systems, Databases, Data Structures, OOP, Embedded Systems, Software Engineering.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="contact-form">
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+              <input id="name" name="name" type="text" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your name" />
+              <div class="error-message" id="name-error"></div>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+              <input id="email" name="email" type="email" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="you@example.com" />
+              <div class="error-message" id="email-error"></div>
+            </div>
+            <div>
+              <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+              <input id="subject" name="subject" type="text" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Project Inquiry" />
+              <div class="error-message" id="subject-error"></div>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+              <textarea id="message" name="message" rows="5" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Hello..."></textarea>
+              <div class="error-message" id="message-error"></div>
+            </div>
+            <button type="submit" id="submit-btn" class="w-full px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-medium hover:opacity-90 transition">
+              <span id="button-text">Send Message</span>
+              <span id="button-spinner" class="spinner hidden"></span>
+            </button>
+          </form>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+          <p class="text-gray-600 mb-8">Open to backend roles and collaborations. Reach out to discuss opportunities.</p>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4"><i class="fas fa-map-marker-alt text-primary"></i></div>
+              <div><h4 class="font-bold mb-1">Location</h4><p class="text-gray-600">Nablus — West Bank, Palestine</p></div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4"><i class="fas fa-envelope text-primary"></i></div>
+              <div>
+                <h4 class="font-bold mb-1">Email</h4>
+                <p class="text-gray-600"><a href="mailto:sholyawad@gmail.com" class="hover:underline">sholyawad@gmail.com</a></p>
+                <button class="copy-email-btn px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-secondary text-white" id="copy-email-btn" data-email="sholyawad@gmail.com"><i class="fas fa-copy mr-1"></i><span id="copy-text">Copy</span></button>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4"><i class="fas fa-phone text-primary"></i></div>
+              <div><h4 class="font-bold mb-1">Phone</h4><p class="text-gray-600">0595957300</p></div>
+            </div>
+          </div>
+          <div class="mt-10">
+            <h4 class="font-bold mb-4">Follow Me</h4>
+            <div class="flex gap-4">
+              <a href="https://www.linkedin.com/in/awad-sholi" target="_blank" rel="noopener" class="social-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/awadsholi" target="_blank" rel="noopener" class="social-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="text-2xl font-bold text-white">A.S<span class="text-secondary">.</span></a>
+          <p class="mt-2 text-gray-400">Building reliable backends</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+          <a href="#about" class="text-gray-400 hover:text-white">About</a>
+          <a href="#experience" class="text-gray-400 hover:text-white">Experience</a>
+          <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 Awad Sholi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Awad Sholi",
+    "url": "https://yourportfolio.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/awad-sholi"
+    ],
+    "jobTitle": "Backend Developer",
+    "worksFor": { "@type": "Organization", "name": "Orienteed" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Birzeit University" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Nablus", "addressRegion": "West Bank", "addressCountry": "Palestine" }
+  }
+  </script>
+
+  <script>
+    // Mobile menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton?.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+
+    // Smooth scroll + back-to-top
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
+        if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); }
+      });
+    });
+
+    // Progress bars
+    const progressBars = document.querySelectorAll('.progress-fill');
+    const animateProgress = () => {
+      progressBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect().top;
+        if (rect < window.innerHeight * 0.8) bar.style.width = bar.dataset.width;
+      });
+    };
+    animateProgress();
+    window.addEventListener('scroll', animateProgress, { passive: true });
+
+    // Scroll progress bar
+    (function(){
+      const bar = document.getElementById('scroll-progress');
+      function maxScroll(){ const d=document.documentElement,b=document.body; const h=Math.max(d.scrollHeight,b.scrollHeight,d.offsetHeight,b.offsetHeight,d.clientHeight,b.clientHeight); return Math.max(0,h - innerHeight); }
+      function set(){ const m=maxScroll(); bar.style.width = (m? (scrollY/m)*100 : 0) + '%'; }
+      addEventListener('scroll', set, { passive:true }); addEventListener('resize', set); addEventListener('load', set);
+      if (document.fonts?.ready) document.fonts.ready.then(set);
+      set();
+    })();
+
+    // Tech ticker
+    (function(){
+      const marquee = document.getElementById('tech-marquee');
+      const track = document.getElementById('tech-track');
+      if (!marquee || !track) return;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let x=0, play=true;
+      const io = new IntersectionObserver(e=>{ play = e[0]?.isIntersecting ?? true; }, { threshold: .1 });
+      io.observe(marquee);
+      function step(){ if (play){ x -= .7; track.style.transform = `translateX(${x}px)`; const first = track.firstElementChild; if (first && Math.abs(x) > first.scrollWidth) x = 0; } requestAnimationFrame(step); }
+      marquee.addEventListener('mouseenter', () => (play = false));
+      marquee.addEventListener('mouseleave', () => (play = true));
+      step();
+    })();
+
+    // Contact form + EmailJS (replace IDs!)
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const buttonText = document.getElementById('button-text');
+    const buttonSpinner = document.getElementById('button-spinner');
+    const notification = document.getElementById('notification');
+    const notificationMessage = document.getElementById('notification-message');
+
+    function showNotification(message, type){
+      notificationMessage.textContent = message;
+      notification.className = `notification ${type} show`;
+      setTimeout(()=> notification.classList.remove('show'), 4000);
+    }
+
+    function validateField(input){
+      const value = input.value.trim();
+      if (!value) return `${input.name} is required`;
+      if (input.type === 'email' && !/^\S+@\S+\.\S+$/.test(value)) return 'Enter a valid email';
+      if (input.name === 'message' && value.length < 10) return 'Message must be at least 10 characters';
+      return '';
+    }
+
+    contactForm?.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const inputs = contactForm.querySelectorAll('.form-input');
+      let ok = true;
+      inputs.forEach(inp=>{ const err = validateField(inp); const errEl = document.getElementById(`${inp.id}-error`); if (err){ ok=false; errEl.textContent = err; errEl.classList.add('show'); } else { errEl.textContent=''; errEl.classList.remove('show'); } });
+      if (!ok) { showNotification('Please fix the errors in the form', 'error'); return; }
+      buttonText.textContent='Sending...'; buttonSpinner.classList.remove('hidden'); submitBtn.disabled = true;
+      try{
+        // TODO: replace with your EmailJS service/template IDs
+        await emailjs.send('service_abvkksr','template_cbn9t7h',{
+          from_name: document.getElementById('name').value,
+          reply_to: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+        });
+        showNotification('Message sent successfully!', 'success');
+        contactForm.reset();
+      }catch(err){
+        console.error(err);
+        showNotification('Failed to send message. Please try again.', 'error');
+      }finally{
+        buttonText.textContent='Send Message'; buttonSpinner.classList.add('hidden'); submitBtn.disabled=false;
+      }
+    });
+
+    // Copy email
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const copyText = document.getElementById('copy-text');
+    copyEmailBtn?.addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(copyEmailBtn.dataset.email); copyText.textContent='Copied!'; setTimeout(()=> copyText.textContent='Copy', 1500); showNotification('Email copied to clipboard!', 'success'); } catch { showNotification('Copy failed', 'error'); }
+    });
+  </script>
+</body>
+</html>
